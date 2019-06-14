@@ -1,0 +1,20 @@
+<h1 class="p-3">Hello, world!</h1>
+<div>
+  Visitor Information : {{colorChangeEvent.value}}
+  <ul *ngIf="visitor">
+    <li class="bullet-none"> -> VisitorID : {{visitor.visitorID}}. VisitorIP : {{visitor.ipAddress}}. VisitorOS : {{visitor.os}}. VisitorBrowser : {{visitor.browser}}</li>
+  </ul>
+</div>
+<p style="padding-left: 24%;">Welcome to your new single page Angular application, and please let use know if you are male or female:</p>
+<div style="table; width:100%; table-layout:fixed">
+  <ul style="display:table-cell; padding-left: 32%;">
+    <li class="bullet-none"><label class="num-size btn-spacing" [ngClass]="{'greater': isMaleGreater, 'lesser' : !isMaleGreater }">{{visitor.malePercent}}%</label></li>
+    <li class="bullet-none"><img width="250" alt="Male Icon" src="{{maleIcon}}"> </li>
+    <li class="bullet-none" *ngIf="visitor"><button class="btn btn-success btn-spacing" type="submit" (click)="onSubmit(visitor, 1)" >Vote</button> </li>
+  </ul>
+  <ul style="display:table-cell; padding-left: 32%;">
+    <li class="bullet-none"><label class="num-size btn-spacing" [ngClass]="{'greater': isFemaleGreater, 'lesser' : !isFemaleGreater }">{{visitor.femalePercent}}%</label></li>
+    <li class="bullet-none"><img width="250" alt="Female Icon" src="{{femaleIcon}}"></li>
+    <li class="bullet-none" *ngIf="visitor"><button class="btn btn-success btn-spacing" type="submit" (click)="onSubmit(visitor, 2)" >Vote</button></li>
+  </ul>
+</div>

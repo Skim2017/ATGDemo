@@ -1,0 +1,26 @@
+.boxLarge {
+  width: 10em;
+  height: 10em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  position: relative;
+}
+
+.boxSmall {
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  margin: -3em 0 0 -3em;
+  left: 50%;
+  top: 50%;
+}
+
+.blue {
+  background-color: #2643ff;
+}
+
+.yellow {
+  background-color: #e5ff26;
+}
